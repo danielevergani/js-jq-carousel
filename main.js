@@ -3,7 +3,7 @@ $(function(){
     var $listaCircle = $(".nav i");
     $listaCircle.click(
         function(){
-            
+
             var $listaImg = $(".images img");
             
             $listaCircle.removeClass("active");
@@ -25,6 +25,17 @@ $(function(){
             nextPhoto();
         }
     );
+
+    $(document).keydown(
+        function(tasto){
+            if(tasto.which == 39){
+                nextPhoto()
+            }
+            else if (tasto.which == 37){
+                prevPhoto()
+            }
+        }
+    )
 
 
 }
