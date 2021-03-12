@@ -1,5 +1,19 @@
 $(function(){
 
+    var $listaCircle = $(".nav i");
+    $listaCircle.click(
+        function(){
+            
+            var $listaImg = $(".images img");
+            
+            $listaCircle.removeClass("active");
+            $(this).addClass("active");
+            var posizione= $(this).index();
+            $listaImg.removeClass("active");
+            $listaImg.eq(posizione).addClass("active");
+        }
+    );
+
     $(".prev").click(
         function (){
             prevPhoto();
@@ -11,6 +25,7 @@ $(function(){
             nextPhoto();
         }
     );
+
 
 }
 );
